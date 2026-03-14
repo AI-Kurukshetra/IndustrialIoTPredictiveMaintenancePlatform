@@ -1,0 +1,5 @@
+select n.nspname as schema_name, p.proname as function_name, pg_get_function_identity_arguments(p.oid) as args
+from pg_proc p
+join pg_namespace n on n.oid = p.pronamespace
+where n.nspname = 'auth'
+  and p.proname like '%create_user%';

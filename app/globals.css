@@ -1,0 +1,53 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #f8fafc;
+  --surface: #ffffff;
+  --text: #0f172a;
+}
+
+body {
+  background:
+    radial-gradient(circle at 5% 0%, #dff6ff 0%, rgba(223, 246, 255, 0) 35%),
+    radial-gradient(circle at 95% 20%, #dbeafe 0%, rgba(219, 234, 254, 0) 35%),
+    var(--bg);
+  color: var(--text);
+  font-family: var(--font-body), sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), sans-serif;
+  letter-spacing: -0.01em;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s ease-out both;
+}
+
+.animate-delay-1 {
+  animation-delay: 0.08s;
+}
+
+.animate-delay-2 {
+  animation-delay: 0.16s;
+}
